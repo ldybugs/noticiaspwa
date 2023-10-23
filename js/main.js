@@ -34,3 +34,10 @@ if ("serviceWorker" in navigator) {
               </div> 
             `
     }
+
+    async function searchNews() {
+      const searchInput = document.getElementById('searchInput').value;
+      url = `https://newsapi.org/v2/everything?q=${searchInput}&apiKey=${apiKey}`;
+      await postNews();
+  }
+
